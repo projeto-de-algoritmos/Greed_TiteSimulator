@@ -8,7 +8,6 @@ const HomePage = () => {
   const [tasks, setTasks] = useState(null);
   const [result, setResult] = useState(null);
   const [isResultMode, setIsResultMode] = useState(false);
-  const [isCreateMode, setIsCreateMode] = useState(false);
 
   const loadTasks = () => {
     const loadedTasks = localStorage.getItem('tasks');
@@ -24,12 +23,10 @@ const HomePage = () => {
     setTasks(newTasks);
   }
 
-  const handleCreateModeBtn = () => setIsCreateMode(!isCreateMode);
   const handleResultModeBtn = () => {
     setResult(getTiteSchedule(tasks))
     setIsResultMode(!isResultMode)
   };
-  const handleResetLocalStorageBtn = () => localStorage.clear();
 
   const renderSelectedTasks = result?.map((taskData, index) => <SelectedTask key={`task-${index}`} taskData={taskData} />);
   const renderPossibleTasks = tasks?.map((taskData, index) => <PossibleTask key={`task-${index}`} index={index} taskData={taskData} removeTask={removeTask} />);
@@ -50,8 +47,8 @@ const HomePage = () => {
             (<>
               <section className="text-center">
                 <h1>Tite Simulator</h1>
-                <p>Depois de vergonhosamente perder a copa do mundo para a Croácia, Tite precisa da sua ajuda pra planejar as férias dele.</p>
-                <p>Adicione ou remova tarefas e clique no botão "Planejar Férias" para ver a nova agenda do professor.</p>
+                <p>Depois de vergonhosamente perder a copa do mundo para a Croácia, Tite precisa da sua ajuda pra fazer o máximo de atividades durante as férias dele.</p>
+                <p>Clique no botão "Planejar Férias" para ver a nova agenda do professor.</p>
               </section>
               <section className='button-list'>
                 <button type="button" className="btn btn-primary" onClick={handleResultModeBtn}>Retornar</button>
@@ -79,8 +76,6 @@ const HomePage = () => {
                 <p>Adicione ou remova tarefas e clique no botão "Planejar Férias" para ver a nova agenda do professor.</p>
               </section>
               <section className='button-list'>
-                <button type="button" className="btn btn-primary" onClick={handleResetLocalStorageBtn}>Reiniciar tarefas</button>
-                <button type="button" className="btn btn-primary" onClick={handleCreateModeBtn}>Adicionar Tarefa</button>
                 <button type="button" className="btn btn-success" onClick={handleResultModeBtn}>Planejar Férias</button>
               </section >
               <section>

@@ -1,6 +1,9 @@
 export const getTiteSchedule = (tasks) => {
 	const orderedTasks = tasks?.sort((a, b) => {
-		return a.horarioFinal < b.horarioFinal ? -1 : a.horarioFinal > b.horarioFinal ? 1 : 0;
+		const horarioFinalA = new Date(a.horarioFinal);
+		const horarioFinalB = new Date(b.horarioFinal);
+
+		return horarioFinalA.getTime() < horarioFinalB.getTime() ? -1 : horarioFinalA.getTime() > horarioFinalB.getTime() ? 1 : 0;
 	});
 	console.log(orderedTasks);
 
@@ -8,9 +11,12 @@ export const getTiteSchedule = (tasks) => {
 	var anterior = 0;
 
 	for (var i = 0; i < tasks?.length; i++) {
-		if (tasks[i].horarioInicial >= anterior) {
+		const horarioInicial = new Date(tasks[i].horarioInicial);
+
+		if (horarioInicial.getTime() >= anterior) {
 			max.push(tasks[i])
-			anterior = tasks[i].horarioFinal;
+			const horarioFinal = new Date(tasks[i].horarioFinal);
+			anterior = horarioFinal.getTime();
 		}
 	}
 
