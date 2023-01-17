@@ -18,19 +18,15 @@ let FindingChange = (currency, amount) => {
 	let cashLeftover = amount;
 
 	//We are checking from the highest bill first to the lowest
-	for (let key in currency)
-	{
+	for (let key in currency) {
 		//While amount leftover is greater than our current bill
 		//we take and subtract it based on the bill's value
-		while (cashLeftover >= currency[key])
-		{
+		while (cashLeftover >= currency[key]) {
 			//Checking to see if the bill type already exist in our return hash.
-			if (resultBills[key])
-			{   //If it does, we increment the bill by one.
+			if (resultBills[key]) {   //If it does, we increment the bill by one.
 				resultBills[key] += 1;
-			}   
-			else
-			{   //if it doesn't, we add the new key/value pair into the hash.
+			}
+			else {   //if it doesn't, we add the new key/value pair into the hash.
 				resultBills[key] = 1;
 			}
 			//Then we subtract the value from the leftover cash.
