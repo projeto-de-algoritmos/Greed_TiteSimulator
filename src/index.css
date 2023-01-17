@@ -9,3 +9,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+section {
+  padding: 16px 32px;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+.home {
+  min-height: 100vh;
+  color: white;
+  background-color: #8A1538;
+}
+
+.btn+.btn {
+  margin-left: 8px;
+}
+
+.card {
+  height: 100%;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
