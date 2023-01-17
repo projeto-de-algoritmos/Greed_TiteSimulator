@@ -10,23 +10,23 @@
 | 150011903 | [Igor Aragão](https://github.com/roginaldosemog)            |
 
 ## Sobre
-O nosso professor Tite está está de férias, e precisando de organização para aproveitar fazendo o máximo de atividades possíveis.
+Após a eliminação vergonhosa do Brasil na Copa do Mundo, Tite está está de férias, e precisa da sua ajuda para fazer o máximo de atividades possíveis até arranjar um novo emprego.
 
 ## Screenshots
 
 **Linguagem**: ReactJS, Javascript  
 <p align="center">
-  <img src="assets/screenshot1.png">
+  <img src="assets/screenshots/screenshot1.png">
 </p>
 <p align="center">
-  <img src="assets/screenshot2.png">
+  <img src="assets/screenshots/screenshot2.png">
 </p>
 <p align="center">
-  <img src="assets/screenshot3.png">
+  <img src="assets/screenshots/screenshot3.png">
 </p>
 
 ## Apresentação
-O vídeo para apresentação se encontra disponível para baixar [AQUI](https://drive.google.com/file/d/1enBjE7iqKg-tahRYLXqJ7FrtqUC17NT4/view?usp=sharing)
+O vídeo para apresentação se encontra disponível para baixar [AQUI](assets/presentation/presentation.mp4)
 
 ## Uso
 Abrir o index.html no seu navegador favorito.  
